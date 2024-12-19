@@ -40,7 +40,7 @@ export default function JobForm({ orgId, jobDoc }: { orgId: string; jobDoc?: Job
     data.set('orgId', orgId);
     data.set('jobIcon', jobIcon);
   
-    const savedJob = await saveJobAction(data);
+    const JobDoc = await saveJobAction(data);
     redirect("/jobs/" + orgId);
   }
   
