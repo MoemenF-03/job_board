@@ -8,13 +8,14 @@ export default function Jobs({header,jobs}:{header:string,jobs:Job[]}) {
         <h2 className="font-bold mb-4">{header || 'Recent jobs'}</h2>
 
         <div className="flex flex-col gap-4">
-          {!jobs?.length && (
-            <div>No jobs found</div>
-          )}
-          {jobs && jobs.map(job => (
-            <JobRow jobDoc={job} />
-          ))}
-        </div>
+  {!jobs?.length && (
+    <div>No jobs found</div>
+  )}
+  {jobs && jobs.map((job) => (
+    <JobRow key={job._id || job._id} jobDoc={job} />
+  ))}
+</div>
+
 
       </div>
     </div>

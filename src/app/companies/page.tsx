@@ -17,7 +17,7 @@ export default async function CompaniesPage() {
   const organizationMemberships = await workos.userManagement.listOrganizationMemberships({
     userId: user.id,
   });
-  let username_ = user.firstName + " " + user.lastName;
+  const username_ = user.firstName + " " + user.lastName;
   // Filter active organizations
   const activeOrganizationMemberships = organizationMemberships.data.filter(
     (om) => om.status === "active"

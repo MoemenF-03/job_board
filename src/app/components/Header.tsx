@@ -7,7 +7,7 @@ import {
  
   withAuth,
 } from '@workos-inc/authkit-nextjs';
-import { get } from 'http';
+
 import Link from 'next/link';
 
 export default async function Header() {

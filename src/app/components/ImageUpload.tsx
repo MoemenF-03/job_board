@@ -1,17 +1,17 @@
-import { IconDefinition } from "@fortawesome/free-regular-svg-icons";
-import { Button } from "@radix-ui/themes";
+
+
 import { useState } from "react";
 import axios from "axios";
 
 interface ImageUploadProps {
-  icon: IconDefinition;
+  
   id_: string;
   defaultValue: string | null;
   sendDataToParent: (data: string) => void;
 }
 
 export default function ImageUpload({
-  icon,
+  
   id_,
   defaultValue=null,
   sendDataToParent,
